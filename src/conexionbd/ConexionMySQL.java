@@ -5,16 +5,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionMySQL implements interfaces.consultas{
-    /*
-    private static final String URL = "mysql://root:kV0wpu9yOJZXNpthhAzV@containers-us-west-129.railway.app:6850/railway";
-    private static final String USUARIO = "root";
-    private static final String CONTRASENA = "kV0wpu9yOJZXNpthhAzV";
-    */
-
     
-    private static final String URL = "jdbc:mysql://localhost:3306/estaciondeserviciov2";
+    private static final String URL = "jdbc:mysql://bvzwd4coj9cqk09gg7qi-mysql.services.clever-cloud.com:3306/bvzwd4coj9cqk09gg7qi";
+    private static final String USUARIO = "uxmkm59vappcv7tx";
+    private static final String CONTRASENA = "Apv6LptbCuahzj4W6cGE";
+    
+    /*private static final String URL = "jdbc:mysql://localhost:3306/estaciondeserviciov2";
     private static final String USUARIO = "root";
-    private static final String CONTRASENA = "";
+    private static final String CONTRASENA = "";*/
     
     private Connection conexion;
 
