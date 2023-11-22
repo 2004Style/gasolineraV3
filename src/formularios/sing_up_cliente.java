@@ -1192,7 +1192,7 @@ public class sing_up_cliente extends javax.swing.JFrame {
         cuentas CUENT = new cuentas();
         
         if (CUENT.validarUsuario(txt_usuario.getText())) {
-            JOptionPane.showMessageDialog(null, " ya se encuentra registrado un usuario con el mismo nombre de usuario y contraseña");
+            JOptionPane.showMessageDialog(null, " ya se encuentra registrado un usuario con el mismo nombre");
         } else {
             trabajadores trab = new trabajadores();
             String DniEncontrado = trab.obtenerDNI(txt_dni.getText());
