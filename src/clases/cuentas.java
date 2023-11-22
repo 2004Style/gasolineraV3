@@ -1,9 +1,6 @@
 package clases;
 
 import conexionbd.ConexionMySQL;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -47,14 +44,13 @@ public class cuentas {
     public void setPermisos(String permisos) {
         this.permisos = permisos;
     }
-    public boolean validarUsuario(String USUARIO, String CONTRASENA) {
+    public boolean validarUsuario(String USUARIO) {
         ConexionMySQL conexionDB = new ConexionMySQL();
-        String consulta = "SELECT C.USUARIO, C.CONTRASENA FROM CUENTAS C WHERE C.USUARIO=? AND C.CONTRASENA=?";
+        String consulta = "SELECT C.USUARIO, C.CONTRASENA FROM CUENTAS C WHERE C.USUARIO=?";
     
         try (Connection connection = conexionDB.conectar();
             PreparedStatement preparedStatement = connection.prepareStatement(consulta)) {
             preparedStatement.setString(1, USUARIO);
-            preparedStatement.setString(2, CONTRASENA);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 

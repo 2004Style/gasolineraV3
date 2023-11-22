@@ -589,7 +589,7 @@ public class sin_up_trabajador extends javax.swing.JFrame {
             System.out.println("CORREO: " +CORREO);
             String DIRECCION = txt_direccion.getText();
             System.out.println("DIRECCION: " +DIRECCION);
-            String TELEFONO = txt_telefono.getText();
+            String TELEFONO = "+51 "+txt_telefono.getText();
             System.out.println("TELEFONO: " +TELEFONO);
             String nacimiento = txt_año.getText()+"-"+txt_mes.getText()+"-"+txt_dia.getText();
             String FECHA_NACIMIENTO = nacimiento;
@@ -650,10 +650,15 @@ public class sin_up_trabajador extends javax.swing.JFrame {
 
             public void changed() {
                 String texto = txt_dni.getText();
-                if (texto.isEmpty() || texto.matches("\\d+")) {
+                if (texto.matches("\\d+")) {
                     label_dni.setForeground(Color.BLACK);
                 } else {
                     label_dni.setForeground(Color.RED);
+                }
+                if (texto.length() < 8) {
+                    label_dni.setForeground(Color.RED);
+                }else {
+                    label_dni.setForeground(Color.BLACK);
                 }
             }
         });
@@ -674,12 +679,25 @@ public class sin_up_trabajador extends javax.swing.JFrame {
             }
 
             public void changed() {
-                String texto = txt_telefono.getText();
+                /*String texto = txt_telefono.getText();
                 if (texto.matches("^\\+\\d+$")) {
                     label_telefono.setForeground(Color.BLACK);
                 } else {
                     label_telefono.setForeground(Color.RED);
+                }*/
+                
+                String texto = txt_telefono.getText();
+                if (texto.matches("\\d{9}") && texto.startsWith("9")) {
+                    label_telefono.setForeground(Color.BLACK);
+                    if (texto.length() != 9) {
+                        label_telefono.setForeground(Color.RED);
+                    }else {
+                        label_telefono.setForeground(Color.BLACK);
+                    }
+                } else {
+                    label_telefono.setForeground(Color.RED);
                 }
+                
             }
         });
         txt_sueldo.getDocument().addDocumentListener(new DocumentListener() {
@@ -2362,7 +2380,7 @@ public class sin_up_trabajador extends javax.swing.JFrame {
     private void jbl_registrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbl_registrarMouseClicked
         cuentas CUENT = new cuentas();
         
-        if (CUENT.validarUsuario(txt_usuario.getText(), txt_pasword.getText())) {
+        if (CUENT.validarUsuario(txt_usuario.getText())) {
             JOptionPane.showMessageDialog(null, " ya se encuentra registrado un usuario con el mismo nombre de usuario y contraseña");
         } else {
             trabajadores trab = new trabajadores();
