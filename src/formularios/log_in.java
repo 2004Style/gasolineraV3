@@ -9,10 +9,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.sql.*;
-
 public class log_in extends javax.swing.JFrame {
 
     public log_in() {

@@ -984,7 +984,7 @@ public class trabajador extends javax.swing.JFrame {
                     label_dni.setForeground(Color.RED);
                 }
                 
-                if (texto.length() < 8) {
+                if (texto.length() != 8) {
                     label_dni.setForeground(Color.RED);
                 }else {
                     label_dni.setForeground(Color.BLACK);
