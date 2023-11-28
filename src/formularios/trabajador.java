@@ -77,7 +77,6 @@ public class trabajador extends javax.swing.JFrame {
         jt_productos = new javax.swing.JTable();
         label_dni = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        label_id_cliente = new javax.swing.JLabel();
         label_cantidadv = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -86,8 +85,6 @@ public class trabajador extends javax.swing.JFrame {
         jbl_RealizarVenta = new javax.swing.JLabel();
         txt_dni_cliente = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        txt_idcliente = new javax.swing.JTextField();
         txt_cantidadv = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
@@ -175,7 +172,7 @@ public class trabajador extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jt_productos);
 
-        pnl_venta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 426, 260));
+        pnl_venta.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 430, 260));
 
         label_dni.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         label_dni.setForeground(new java.awt.Color(0, 0, 0));
@@ -187,15 +184,10 @@ public class trabajador extends javax.swing.JFrame {
         jLabel8.setText("Combustible");
         pnl_venta.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
 
-        label_id_cliente.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
-        label_id_cliente.setForeground(new java.awt.Color(0, 0, 0));
-        label_id_cliente.setText("id cliente");
-        pnl_venta.add(label_id_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
-
         label_cantidadv.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         label_cantidadv.setForeground(new java.awt.Color(0, 0, 0));
         label_cantidadv.setText("Cantidad");
-        pnl_venta.add(label_cantidadv, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, -1, -1));
+        pnl_venta.add(label_cantidadv, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 80, -1));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -266,19 +258,6 @@ public class trabajador extends javax.swing.JFrame {
         });
         pnl_venta.add(txt_dni_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 220, -1));
         pnl_venta.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 220, 10));
-        pnl_venta.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 160, 10));
-
-        txt_idcliente.setBackground(new java.awt.Color(255, 255, 255));
-        txt_idcliente.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
-        txt_idcliente.setForeground(java.awt.Color.gray);
-        txt_idcliente.setText("Ingrese el ID del cliente aquí");
-        txt_idcliente.setBorder(null);
-        txt_idcliente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                txt_idclienteMousePressed(evt);
-            }
-        });
-        pnl_venta.add(txt_idcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, -1, -1));
 
         txt_cantidadv.setBackground(new java.awt.Color(255, 255, 255));
         txt_cantidadv.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
@@ -290,8 +269,8 @@ public class trabajador extends javax.swing.JFrame {
                 txt_cantidadvMousePressed(evt);
             }
         });
-        pnl_venta.add(txt_cantidadv, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, -1, -1));
-        pnl_venta.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 190, 10));
+        pnl_venta.add(txt_cantidadv, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 220, -1));
+        pnl_venta.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 220, 10));
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
 
@@ -316,14 +295,14 @@ public class trabajador extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jbl_BuscarPorTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+            .addComponent(jbl_BuscarPorTipo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jbl_BuscarPorTipo, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        pnl_venta.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 220, 30));
+        pnl_venta.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 210, 30));
 
         pnl_MostrarTodo.setBackground(new java.awt.Color(0, 51, 51));
 
@@ -349,14 +328,14 @@ public class trabajador extends javax.swing.JFrame {
         pnl_MostrarTodo.setLayout(pnl_MostrarTodoLayout);
         pnl_MostrarTodoLayout.setHorizontalGroup(
             pnl_MostrarTodoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jlb_MostrarTodo, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+            .addComponent(jlb_MostrarTodo, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
         );
         pnl_MostrarTodoLayout.setVerticalGroup(
             pnl_MostrarTodoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jlb_MostrarTodo, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        pnl_venta.add(pnl_MostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 220, 30));
+        pnl_venta.add(pnl_MostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 210, 30));
 
         jLabel10.setFont(new java.awt.Font("Roboto Black", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -988,48 +967,12 @@ public class trabajador extends javax.swing.JFrame {
                     label_dni.setForeground(Color.RED);
                 }else {
                     label_dni.setForeground(Color.BLACK);
+                    String id = null;
                     buscar_cliente();
                 }
             }
         });
-        
-        txt_idcliente.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                changed();
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                changed();
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                changed();
-            }
-
-            public void changed() {
-                String texto = txt_idcliente.getText();
-                if (texto.matches("\\d+")) {
-                    label_id_cliente.setForeground(Color.BLACK);
-                    
-                    if (txt_cantidadv.getText().equals("Ingrese la cantidad de combustible")) {
-                        
-                        pnl_realizarventa.setBackground(new Color(0,51,102));
-                        jbl_RealizarVenta.setForeground(Color.white);
-                    }else{
-                        pnl_realizarventa.setBackground(new Color(0,102,153));
-                        jbl_RealizarVenta.setForeground(Color.white);
-                    }
-                } else {
-                    label_id_cliente.setForeground(Color.RED);
-                    pnl_realizarventa.setBackground(new Color(0,51,102));
-                    jbl_RealizarVenta.setForeground(Color.white);
-                }
-            }
-        });
-        
+              
         txt_cantidadv.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -1050,15 +993,8 @@ public class trabajador extends javax.swing.JFrame {
                 String texto = txt_cantidadv.getText();
                 if (texto.matches("\\d+")) {
                     label_cantidadv.setForeground(Color.BLACK);
-                    
-                    if (txt_idcliente.getText().equals("Ingrese la cantidad de combustible")) {
-                        
-                        pnl_realizarventa.setBackground(new Color(0,51,102));
-                        jbl_RealizarVenta.setForeground(Color.white);
-                    }else{
-                        pnl_realizarventa.setBackground(new Color(0,102,153));
-                        jbl_RealizarVenta.setForeground(Color.white);
-                    }
+                    pnl_realizarventa.setBackground(new Color(0,102,153));
+                    jbl_RealizarVenta.setForeground(Color.white);
                 }else {
                     label_cantidadv.setForeground(Color.RED);
                     pnl_realizarventa.setBackground(new Color(0,51,102));
@@ -1097,102 +1033,80 @@ public class trabajador extends javax.swing.JFrame {
     }//GEN-LAST:event_jbl_RealizarVentaMouseClicked
 
     public void validarcamposdeventa(){
-        if (txt_idcliente.getText().equals("Ingrese el ID del cliente aquí") && txt_cantidadv.getText().equals("Ingrese la cantidad de combustible")) {
-            JOptionPane.showMessageDialog(null, "los campos de id del usuario y cantida de combustible a vender se encuentran vacios");
+        if (txt_cantidadv.getText().equals("Ingrese la cantidad de combustible")) {
+            JOptionPane.showMessageDialog(null, "el campo de cantidad de combustible a vender se encuentra vacio");
         }
-        if (txt_idcliente.getText().matches("\\d+")&&txt_cantidadv.getText().matches("\\d+")) {
-            if (txt_idcliente.getText().equals("Ingrese el ID del cliente aquí") || txt_idcliente.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "el campo de id de usuario se encuentra vacio");
-            }
-            if (txt_cantidadv.getText().equals("Ingrese la cantidad de combustible") || txt_cantidadv.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "el campo de la cantidad de combustible para vender esta vacio");
-            }
-            else{
-                clases.turnos turno = new turnos();
-                boolean sePuedeRealizarVenta = turno.verificarHorasTurno(this.Turno_id);
-                if (sePuedeRealizarVenta) {
+        if (txt_cantidadv.getText().matches("\\d+")) {
+            clases.turnos turno = new turnos();
+            boolean sePuedeRealizarVenta = turno.verificarHorasTurno(this.Turno_id);
+            if (sePuedeRealizarVenta) {
+                combustible cantidadCombustible = new combustible();
+                String tipo = (String) cb_tipo.getSelectedItem();
+                String nombre = (String) cb_combustible.getSelectedItem();
+                int cantidadVenta = Integer.parseInt(txt_cantidadv.getText());
+                int cantidadDisponible = cantidadCombustible.CantidadDisponible(tipo,nombre);
+                if (cantidadVenta <= cantidadDisponible) {
                     pnl_realizarventa.setBackground(new Color(0,102,153));
                     jbl_RealizarVenta.setForeground(Color.white);
                     realizarventa();
-                } else {
-                    System.out.println("No se pueden realizar ventas fuera del horario de trabajo.");
-                    JOptionPane.showMessageDialog(null, "No se pueden realizar ventas fuera del horario de trabajo.");
                 }
+                else{
+                    pnl_realizarventa.setBackground(new Color(0,51,102));
+                    jbl_RealizarVenta.setForeground(Color.white);
+                    JOptionPane.showMessageDialog(null, "la cantidad que desea vender es superior a la cantidad que dispone la estacion de servicio.");
+                }
+            } else {
+                System.out.println("No se pueden realizar ventas fuera del horario de trabajo.");
+                JOptionPane.showMessageDialog(null, "No se pueden realizar ventas fuera del horario de trabajo.");
             }
         }
         else{
             JOptionPane.showMessageDialog(null, "los campos deben tener un valor numerico");
         }
     }
-    public void buscar_cliente(){
+    public int buscar_cliente(){
         String dni = txt_dni_cliente.getText();
-        
-        if (dni.equals("Ingrese el Dni del cliente a buscar") || dni.equals("")) {
-            JOptionPane.showMessageDialog(null, "el campo del dni Esta en blanco ingrese un numero de Dni antes de buscar");
-        }
-        else{
-            ConexionMySQL conexionDB = new ConexionMySQL();
+        ConexionMySQL conexionDB = new ConexionMySQL();
+        String consulta = "SELECT CL.CLIENTES_ID, P.DNI, P.NOMBRE, P.APELLIDOS_PATERNOS, P.APELLIDOS_MATERNOS, P.TELEFONO " +
+                "FROM PERSONAS P " +
+                "INNER JOIN CLIENTES CL ON P.PERSONAS_ID = CL.PERSONAS_ID " +
+                "WHERE DNI = ?";
+        try (Connection connection = conexionDB.conectar();
+            PreparedStatement preparedStatement = connection.prepareStatement(consulta)) {
+            preparedStatement.setString(1, dni);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            String consulta = "SELECT CL.CLIENTES_ID, P.DNI, P.NOMBRE, P.APELLIDOS_PATERNOS, P.APELLIDOS_MATERNOS, P.TELEFONO " +
-                            "FROM PERSONAS P " +
-                            "INNER JOIN CLIENTES CL ON P.PERSONAS_ID = CL.PERSONAS_ID " +
-                            "WHERE DNI = ?";
-
-            try (Connection connection = conexionDB.conectar();
-                PreparedStatement preparedStatement = connection.prepareStatement(consulta)) {
-                preparedStatement.setString(1, dni);
-
-                ResultSet resultSet = preparedStatement.executeQuery();
-
-                if (resultSet.next()) {
-                    String id = resultSet.getString("CLIENTES_ID");
-                    String Dni = resultSet.getString("DNI");
-                    String nombre = resultSet.getString("NOMBRE");
-                    String apellidop = resultSet.getString("APELLIDOS_PATERNOS");
-                    String apellidom = resultSet.getString("APELLIDOS_MATERNOS");
-                    String telefono = resultSet.getString("TELEFONO");
-                
-                    String cliente = ("ID: "+id+"\nDNI: "+Dni+"\nCLIENTE: "+nombre+", "+apellidop+", "+apellidom+"\nTELEFONO: "+telefono);
-                    ta_cliente.setText(cliente);
-                    System.out.println("cliente encontrado: "+cliente);
-                }else{
-                    String nciente= "no se encontro ningun cliente\nregistrado";
-                    ta_cliente.setText(nciente);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+            if (resultSet.next()) {
+                String id = resultSet.getString("CLIENTES_ID");
+                String Dni = resultSet.getString("DNI");
+                String nombre = resultSet.getString("NOMBRE");
+                String apellidop = resultSet.getString("APELLIDOS_PATERNOS");
+                String apellidom = resultSet.getString("APELLIDOS_MATERNOS");
+                String telefono = resultSet.getString("TELEFONO");
+                String cliente = ("ID: "+id+"\nDNI: "+Dni+"\nCLIENTE: "+nombre+", "+apellidop+", "+apellidom+"\nTELEFONO: "+telefono);
+                ta_cliente.setText(cliente);
+                System.out.println("cliente encontrado: "+cliente);
+                int ID = Integer.parseInt(id);
+                return ID;
+            }else{
+                String nciente= "no se encontro ningun cliente\nregistrado";
+                ta_cliente.setText(nciente);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return 0;
     }
     private void txt_dni_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_dni_clienteMousePressed
         if (txt_dni_cliente.getText().equals("Ingrese el Dni del cliente a buscar")) {
             txt_dni_cliente.setText("");
             txt_dni_cliente.setForeground(Color.black);
         }
-        if (txt_idcliente.getText().isEmpty()) {
-            txt_idcliente.setText("Ingrese el ID del cliente aquí");
-            txt_idcliente.setForeground(Color.gray);
-        }
         if (txt_cantidadv.getText().isEmpty()) {
             txt_cantidadv.setText("Ingrese la cantidad de combustible");
             txt_cantidadv.setForeground(Color.gray);
         }
     }//GEN-LAST:event_txt_dni_clienteMousePressed
-
-    private void txt_idclienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_idclienteMousePressed
-        if (txt_idcliente.getText().equals("Ingrese el ID del cliente aquí")) {
-            txt_idcliente.setText("");
-            txt_idcliente.setForeground(Color.black);
-        }
-        if (txt_dni_cliente.getText().isEmpty()) {
-            txt_dni_cliente.setText("Ingrese el Dni del cliente a buscar");
-            txt_dni_cliente.setForeground(Color.gray);
-        }
-        if (txt_cantidadv.getText().isEmpty()) {
-            txt_cantidadv.setText("Ingrese la cantidad de combustible");
-            txt_cantidadv.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_txt_idclienteMousePressed
 
     private void txt_cantidadvMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_cantidadvMousePressed
         if (txt_cantidadv.getText().equals("Ingrese la cantidad de combustible")) {
@@ -1202,10 +1116,6 @@ public class trabajador extends javax.swing.JFrame {
         if (txt_dni_cliente.getText().isEmpty()) {
             txt_dni_cliente.setText("Ingrese el Dni del cliente a buscar");
             txt_dni_cliente.setForeground(Color.gray);
-        }
-        if (txt_idcliente.getText().isEmpty()) {
-            txt_idcliente.setText("Ingrese el ID del cliente aquí");
-            txt_idcliente.setForeground(Color.gray);
         }
     }//GEN-LAST:event_txt_cantidadvMousePressed
 
@@ -1325,71 +1235,83 @@ public class trabajador extends javax.swing.JFrame {
         combustible comb = new combustible();
         double precio = comb.obtenerPrecioCombustible(tiposeleccionado, combustibleseleccionado);
         
-        int CLIENTES_ID = Integer.parseInt(txt_idcliente.getText());
-        String COMBUSTIBLE = combustibleseleccionado;
-        int CANTIDAD = Integer.parseInt(txt_cantidadv.getText());
-        double PRECIO_UNITARIO = precio;
-        double PRECIO_TOTAL = precio * CANTIDAD;
-        String TURNO = this.nombreTurno;
-        String VENDEDOR = this.nombrePersona;
         
-        JTextField txt_dinero_recibido = new JTextField();
-            txt_dinero_recibido.setFont(new Font("Roboto Black", Font.PLAIN, 14));
-            txt_dinero_recibido.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                updateColor();
-            }
-            
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-            updateColor();
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                updateColor();
-            }
-
-            private void updateColor() {
-                try {
-                    double dineroRecibido = Double.parseDouble(txt_dinero_recibido.getText());
-                    if (dineroRecibido < PRECIO_TOTAL) {
-                        txt_dinero_recibido.setForeground(Color.RED);
-                    } else {
-                        txt_dinero_recibido.setBackground(Color.BLACK);
-                        txt_dinero_recibido.setForeground(Color.GREEN);
-                    }
-                } catch (NumberFormatException ex) {
-                    txt_dinero_recibido.setForeground(Color.BLACK);
+        int CLIENTES_ID = buscar_cliente();
+        if (CLIENTES_ID != 0) {
+            String COMBUSTIBLE = combustibleseleccionado;
+            int CANTIDAD = Integer.parseInt(txt_cantidadv.getText());
+            double PRECIO_UNITARIO = precio;
+            double PRECIO_TOTAL = precio * CANTIDAD;
+            String TURNO = this.nombreTurno;
+            String VENDEDOR = this.nombrePersona;
+        
+            JTextField txt_dinero_recibido = new JTextField();
+                txt_dinero_recibido.setFont(new Font("Roboto Black", Font.PLAIN, 14));
+                txt_dinero_recibido.getDocument().addDocumentListener(new DocumentListener() {
+                @Override
+                public void insertUpdate(DocumentEvent e) {
+                    updateColor();
                 }
-            }
-        });
-
-        Object[] message = {
-            "Monto total = " + PRECIO_TOTAL + "\nIngrese el dinero recibido:",
-            txt_dinero_recibido
-        };
-
-        int option = JOptionPane.showOptionDialog(null,
-        message,"Mensaje",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE,null,
-        new Object[]{"Cancelar venta", "Realizar Venta"},"default");
-
-        if (option == 0) {
-            System.out.println("venta cancelada");
-        } else if (option == 1) {
-            double DINERO_RECIBIDO = Double.parseDouble(txt_dinero_recibido.getText());
-            ventas nuevaventa = new ventas(CLIENTES_ID, COMBUSTIBLE, PRECIO_UNITARIO, PRECIO_TOTAL, TURNO, CANTIDAD, VENDEDOR, DINERO_RECIBIDO);
-            nuevaventa.registrarVenta(CLIENTES_ID, COMBUSTIBLE, PRECIO_UNITARIO, PRECIO_TOTAL, TURNO, CANTIDAD, VENDEDOR, DINERO_RECIBIDO);
-        
-            comb.actualizarCantidad(tiposeleccionado, combustibleseleccionado, CANTIDAD);
             
-            mostrarregistro();
-            buscarportipo();
-            System.out.println("venta realizada");
-        } else {
-            System.out.println("Ventana cerrada");
+                @Override
+                public void removeUpdate(DocumentEvent e) {
+                updateColor();
+                }
+
+                @Override
+                public void changedUpdate(DocumentEvent e) {
+                    updateColor();
+                }
+
+                private void updateColor() {
+                    try {
+                        double dineroRecibido = Double.parseDouble(txt_dinero_recibido.getText());
+                        if (dineroRecibido < PRECIO_TOTAL) {
+                            txt_dinero_recibido.setForeground(Color.RED);
+                        } else {
+                            txt_dinero_recibido.setForeground(Color.GREEN);
+                        }
+                    } catch (NumberFormatException ex) {
+                    }
+                }
+            });
+
+            Object[] message = {
+                "Monto total = " + PRECIO_TOTAL + "\nIngrese el dinero recibido:",
+                txt_dinero_recibido
+            };
+
+            int option = JOptionPane.showOptionDialog(null,
+            message,"Mensaje",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE,null,
+            new Object[]{"Cancelar venta", "Realizar Venta"},"default");
+
+            if (option == 0) {
+                System.out.println("venta cancelada");
+            } else if (option == 1) {
+                double dineroRecibido = Double.parseDouble(txt_dinero_recibido.getText());
+                if (dineroRecibido < PRECIO_TOTAL) {
+                    JOptionPane.showMessageDialog(null, "el monto que ah ingresado es inferior al monto del precio total");
+                } else {
+                    double DINERO_RECIBIDO = Double.parseDouble(txt_dinero_recibido.getText());
+                    ventas nuevaventa = new ventas(CLIENTES_ID, COMBUSTIBLE, PRECIO_UNITARIO, PRECIO_TOTAL, TURNO, CANTIDAD, VENDEDOR, DINERO_RECIBIDO);
+                    nuevaventa.registrarVenta(CLIENTES_ID, COMBUSTIBLE, PRECIO_UNITARIO, PRECIO_TOTAL, TURNO, CANTIDAD, VENDEDOR, DINERO_RECIBIDO);
+        
+                    comb.actualizarCantidad(tiposeleccionado, combustibleseleccionado, CANTIDAD);
+            
+                    mostrarregistro();
+                    buscarportipo();
+                    System.out.println("venta realizada");
+                }
+            
+            
+            } else {
+                System.out.println("Ventana cerrada");
+            }
         }
+        else{
+            JOptionPane.showMessageDialog(null, "debe ingresar el numero de DNI del cliente al que esta realizando la venta");
+        }
+        
         
     }
     public static void main(String args[]) {
@@ -1434,7 +1356,6 @@ public class trabajador extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -1454,7 +1375,6 @@ public class trabajador extends javax.swing.JFrame {
     private javax.swing.JLabel label_cantidad;
     private javax.swing.JLabel label_cantidadv;
     private javax.swing.JLabel label_dni;
-    private javax.swing.JLabel label_id_cliente;
     private javax.swing.JLabel label_precio;
     private javax.swing.JLabel lbl_home;
     private javax.swing.JPanel pnl_MostrarTodo;
@@ -1471,7 +1391,6 @@ public class trabajador extends javax.swing.JFrame {
     private javax.swing.JTextField txt_cantidad;
     private javax.swing.JTextField txt_cantidadv;
     private javax.swing.JTextField txt_dni_cliente;
-    private javax.swing.JTextField txt_idcliente;
     private javax.swing.JTextField txt_nombre;
     private javax.swing.JTextField txt_precio;
     private javax.swing.JTextField txt_tipo;

@@ -123,7 +123,7 @@ public class combustible {
         }
     }
 
-    private int CantidadDisponible(String tipo, String nombre) {
+    public int CantidadDisponible(String tipo, String nombre) {
         Connection conexion = conexionDB.conectar();
         int cantidad = 0;
 
