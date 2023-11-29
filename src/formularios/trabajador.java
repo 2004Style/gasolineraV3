@@ -479,7 +479,7 @@ public class trabajador extends javax.swing.JFrame {
 
         getContentPane().add(pnl_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 680, 400));
 
-        lbl_home.setIcon(new javax.swing.ImageIcon("C:\\Users\\chave\\Downloads\\home.png")); // NOI18N
+        lbl_home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home.png"))); // NOI18N
         getContentPane().add(lbl_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 670, 400));
 
         pnl_barra_menu.setBackground(new java.awt.Color(4, 13, 18));
