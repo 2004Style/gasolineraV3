@@ -933,7 +933,6 @@ public class trabajador extends javax.swing.JFrame {
         pnl_registros.setBackground(new Color(4,13,18));
         jbl_registro.setForeground(Color.white);
     }//GEN-LAST:event_jbl_registroMouseExited
-
     private void jbl_ventasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbl_ventasMouseClicked
         lbl_home.setVisible(false);
         pnl_registro.setVisible(false);
@@ -1034,7 +1033,7 @@ public class trabajador extends javax.swing.JFrame {
 
     public void validarcamposdeventa(){
         if (txt_cantidadv.getText().equals("Ingrese la cantidad de combustible")) {
-            JOptionPane.showMessageDialog(null, "el campo de cantidad de combustible a vender se encuentra vacio");
+            JOptionPane.showMessageDialog(null, "el campo de cantidad del combustible a vender se encuentra vacio");
         }
         if (txt_cantidadv.getText().matches("\\d+")) {
             clases.turnos turno = new turnos();
